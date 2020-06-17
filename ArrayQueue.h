@@ -73,6 +73,8 @@ inline T ArrayQueue<T>::dequeue()
 		{
 			smth = Storage[First];
 			First++;
+			if ((First == 0 && Last == 5 - 1) || Last == First - 1)
+				First = Last = -1;
 		}
 	}
 	else std::cout << "Kolejka jest pusta!" << std::endl;
